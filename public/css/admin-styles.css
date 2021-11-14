@@ -1,0 +1,29 @@
+.img-rendering {
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+h1, h2, h3 , h4 , h5 , h6 {
+    font-weight: 700;
+}
+
+
+#holder img,
+#holder2 img {
+    border-radius: 4px;
+}
+
+#holder2 img {
+    display: none;
+}
+
+#holder.slider-holder img {
+    width: 300px !important;
+    height: auto !important;
+}
+
+label {
+    color: #666666;
+}

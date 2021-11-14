@@ -1,0 +1,890 @@
+/*-----------------------------------------------------------------------------
+    1. Global Styles
+-----------------------------------------------------------------------------*/
+
+/* Colors */
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+.img-rendering {
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+
+/* Section Styles */
+
+.section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.section-bg {
+    background-color: #f7f7f7;
+}
+
+.section-head {
+    margin-bottom: 40px;
+}
+
+.section-head .section-title {
+    font-weight: 800;
+    font-size: 36px;
+    margin-bottom: 5px !important;
+}
+
+.section-head .section-subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.section-head hr {
+    width: 80px;
+    border-width: 4px;
+    border-color: #ff7b2a;
+    border-radius: 10px;
+    -webkit-border-radius: 4px;
+    margin: 0 auto;
+}
+  
+
+.rgba-gradient {
+    background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
+    background: -webkit-gradient(linear, 45deg, from(rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%));
+    background: linear-gradient(to 45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
+}
+
+
+
+/* Flip Card */
+.card-flip > div {
+    backface-visibility: hidden;
+    transition: transform 300ms;
+    transition-timing-function: linear;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+}
+  
+.card-front {
+    transform: rotateY(0deg);
+}
+  
+.card-back {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+}
+  
+.card-flip:hover .card-front {
+    transform: rotateY(-180deg);
+}
+    
+.card-flip:hover .card-back {
+    transform: rotateY(0deg);
+}
+
+
+/* Pagination */
+
+.pagination .page-item .page-link {
+    /* font-weight: 500; */
+    font-size: 14px;
+
+}
+
+
+
+
+
+/*-----------------------------------------------------------------------------
+    2. Navbar
+-----------------------------------------------------------------------------*/
+
+.navbar {
+    z-index: 9999;
+    -webkit-box-shadow: 0 10px 20px 0 rgb(0 0 0 / 5%);
+    box-shadow: 0 10px 20px 0 rgb(0 0 0 / 5%);
+}
+
+.navbar .navbar-brand {
+    font-weight: 700;
+}
+
+.navbar .navbar-brand img {
+    height: 45px;
+    width: 45px;
+    image-rendering: optimizeQuality;
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+}
+
+.navbar .navbar-brand span {
+    letter-spacing: 1px;
+}
+
+.navbar .nav-item {
+    color: #fff !important;
+    font-size: .95rem;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+}
+
+.navbar .nav-item .nav-link:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.navbar .dropdown-menu a {
+    font-weight: 400;
+    padding: 6px 15px;
+    margin: 0 !important;
+ 
+}
+
+.navbar .dropdown-menu a:hover {
+    background-color: #e9ecef;
+    
+}
+
+
+.top-nav-collapse {
+    background-color: rgba(255, 124, 42, 0.85) !important;
+}
+  
+.navbar:not(.top-nav-collapse) {
+    background: transparent !important;
+    background-color: rgba(255, 124, 42, 0.85) !important;
+}
+  
+@media (max-width: 991px) {
+    .navbar:not(.top-nav-collapse) {
+        background-color: rgba(255, 124, 42, 0.85) !important;
+    }
+}
+
+
+
+
+
+/*-----------------------------------------------------------------------------
+    3. Home Page Intro
+-----------------------------------------------------------------------------*/
+
+/* html,
+body,
+header,
+.view.home-page-intro {
+  height: 100%;
+} */
+
+.home-page-intro .row {
+    padding-top: 120px;
+    padding-bottom: 80px;
+    min-height: 100vh;
+}
+
+#intro-coverflow {
+    overflow: hidden;
+}
+
+.home-page-intro .profession {
+    color: #f5f5f5 !important;
+    font-size: 20px;
+}
+
+.home-page-intro .contact-btn {
+    background-color: #ff7b2a !important;
+    font-weight: 400;
+}
+
+#intro-coverflow img {
+    width: 350px;
+    max-height: 100%;
+    height: auto;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+/* 
+@media (min-width: 992px) {
+    .home-page-intro .row {
+        margin-top: 200px;
+    }
+
+    
+}
+
+@media (min-width: 767px) and (max-width: 991.98px) {
+
+    .home-page-intro .row {
+        margin-top: 200px;
+    }
+    
+    #intro-coverflow img {
+        width: 250px;
+        max-height: 100%;
+        height: auto;
+        image-rendering: auto;
+        image-rendering: crisp-edges;
+        image-rendering: pixelated;
+        image-rendering: -webkit-optimize-contrast;
+    }
+
+} */
+
+/* @media (max-width: 767.98px) {
+    html,
+    body,
+    header,
+    .view.home-page-intro {
+      height: 800px;
+    }
+
+    .home-page-intro .row {
+        margin-top: 120px;
+    }
+
+    #intro-coverflow img {
+        width: 280px;
+        max-height: 100%;
+        height: auto;
+        image-rendering: auto;
+        image-rendering: crisp-edges;
+        image-rendering: pixelated;
+        image-rendering: -webkit-optimize-contrast;
+    }
+
+} */
+
+
+
+
+
+/*-----------------------------------------------------------------------------
+    4. Services Section
+-----------------------------------------------------------------------------*/
+
+
+
+.services .service-item {
+    margin-bottom: 30px;
+}
+
+.services .service-item .card {
+    padding: 1.25rem;
+}
+
+.services .service-item .service-image {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 15px;
+}
+
+.services .service-item .service-name {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 12px;
+} 
+
+.services .service-item .service-description {
+    color: #999;
+    font-size: 0.96rem;
+    font-weight: 400;
+
+}
+
+
+
+/*-----------------------------------------------------------------------------
+    5. Skill Section
+-----------------------------------------------------------------------------*/
+.section.skills .progress {
+    margin-bottom: 1rem;
+}
+
+.section.skills .progress-bar {
+    background-color: #ff7b2a !important;
+}
+
+.section.skills h5 {
+    font-size: 1.1rem;
+}
+
+
+/*-----------------------------------------------------------------------------
+    5. Course Section
+-----------------------------------------------------------------------------*/
+.courses .course-item {
+    margin-bottom: 30px;
+}
+
+.courses .course-item .card-title {
+    font-weight: 700;
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.courses .course-item .course-fee {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #ff7b2a;
+}
+
+.courses .course-item .card-text {
+    font-weight: 400;
+    color: #999;
+    font-size: 0.96rem;
+}
+
+.courses .course-item .course-info {
+    margin-bottom: 15px;
+}
+
+.courses .course-item .course-info span {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #333;
+}
+
+
+
+/*-----------------------------------------------------------------------------
+    5. Project Section
+-----------------------------------------------------------------------------*/
+
+.projects {}
+
+.projects .project-item {
+    margin-bottom: 30px;
+}
+
+
+.projects .project-item  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -o-object-fit: cover;
+    border-radius: 4px;
+}
+
+.projects .project-item .card .card-body {
+    padding: 35px;
+}
+
+.projects .project-item .card .card-body .card-title {
+    font-weight: 700;
+    font-size: 23px;
+}
+
+.projects .project-item .card .card-body .project-type {
+    color: #f9f9f9;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.projects .project-item .card .card-body .card-text {
+    font-size: .96rem;
+    color: #fff;
+    font-weight: 300;
+}
+
+.projects .project-item .card .card-back {
+    background-color: #ff7c2a !important;
+    border-radius: 4px;
+}
+
+
+
+
+
+/*-----------------------------------------------------------------------------
+    6. Blog Post Section
+-----------------------------------------------------------------------------*/
+
+.blog-posts  .blog-post-item {
+    margin-bottom: 30px;
+}
+
+.blog-posts .blog-post-item .categories {
+    margin-bottom: 4px;
+}
+
+.blog-posts .blog-post-item .categories a {
+    display: inline-block;
+    font-weight: 600;
+    margin-right: 8px;
+    color: #ff7b2a;
+    transition: .2s;
+    text-transform: uppercase;
+    font-size: .75rem;
+}
+
+.blog-posts .blog-post-item .categories a:hover {
+    opacity: .8;
+}
+
+.blog-posts .blog-post-item .card-title {
+    font-weight: 700;
+    color: #222;
+}
+
+.blog-posts .blog-post-item .card-title a {
+    color: inherit;
+    transition: .3s;
+}
+
+.blog-posts .blog-post-item .card-title a:hover {
+    opacity: .8;
+}
+
+.blog-posts .blog-post-item .card-body .card-text {
+    font-weight: 400;
+    font-size: 0.96rem;
+    color: #888;
+}
+
+.blog-posts .blog-post-item .card-body .post-time {
+    color: #222;
+}
+
+
+
+
+/*-----------------------------------------------------------------------------
+    6. Contact Section
+-----------------------------------------------------------------------------*/
+
+.contact .contact-form .form-control {
+    height: auto;
+    padding: 10px 15px;
+}
+
+.contact ul li {
+    margin-bottom: 30px;
+}
+
+
+
+
+/*-----------------------------------------------------------------------------
+    6. Footer
+-----------------------------------------------------------------------------*/
+.footer {
+    background-color: #111;
+    color: #fff;
+}
+
+.footer .footer-widgets {
+    padding: 50px 0 20px;
+    border-bottom: 1px solid #333;
+}
+
+.footer .widget {
+    margin-bottom: 30px;
+}
+
+.footer .widget-title {
+    color: #ff7b2a;
+    font-size: 18px;
+}
+
+.footer .widget ul li {
+    margin-bottom: 5px;
+}
+
+.footer .widget ul li a {
+    color: #a9a39f;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+.footer .widget ul li a:hover {
+    color: #fff;
+}
+
+.footer .footer-copyright {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 15px;
+    color: #eee;
+    font-weight: 300;
+}
+
+.footer .footer-copyright a {
+    color: #ff7b2a;
+}
+
+
+
+
+
+/*-----------------------------------------------------------------------------
+    6. Single Post
+-----------------------------------------------------------------------------*/
+.sidebar .sidebar-item {
+    background-color: #edfcf4;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+.sidebar .sidebar-item .sidebar-title {
+    font-size: 22px;
+    padding: 12px 15px;
+    margin: 0;
+}
+
+.sidebar .sidebar-item.category-sidebar ul {
+    padding: 10px 0;
+}
+
+.sidebar .sidebar-item.category-sidebar ul li a {
+    color: #333;
+    font-weight: 500;
+    display: block;
+    padding: 6px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar .sidebar-item.category-sidebar ul li a.active,
+.sidebar .sidebar-item.category-sidebar ul li a:hover {
+    background-color: #eee;
+}
+
+
+.sidebar .media-sidebar .media {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar .media-sidebar .media .media-body h5 {
+    font-size: 17px;
+}
+
+.sidebar .media-sidebar .media img {
+    width: 60px;
+    height: 60px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+
+/* Comment Styles */
+.comment img {
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    object-fit: cover;
+    -o-object-fit: cover;
+}
+
+.comment .shared-date {
+    font-size: .9rem;
+}
+
+
+.pagination .page-item .page-link {
+    background-color: #e5e5e5;
+}
+
+.pagination .page-item.prev .page-link,
+.pagination .page-item.next .page-link {
+    border-radius: 8px !important;
+    font-weight: 500;
+    background-color: #ff6f00;
+    color: #fff ;
+}
+
+.pagination .page-item.disabled .page-link,
+.pagination .page-item.disabled .page-link {
+    background-color: #ddd;
+    color: #aaa;
+}
+
+
+
+
+
+
+/*******************************************************************************
+    Useful Classes 
+********************************************************************************/
+
+/* Spacing ( with Margin and Padding ) */
+
+/* Margin */
+
+.margin-0 {
+	margin: 0px !important;
+}
+
+/* Margin Top */
+
+.margin-top-0 {
+	margin-top: 0px !important;
+}
+
+.margin-top-10 {
+	margin-top: 10px !important;
+}
+
+.margin-top-20 {
+	margin-top: 20px !important;
+}
+
+.margin-top-30 {
+	margin-top: 30px !important;
+}
+
+.margin-top-40 {
+	margin-top: 40px !important;
+}
+
+.margin-top-50 {
+	margin-top: 50px !important;
+}
+
+.margin-top-60 {
+	margin-top: 60px !important;
+}
+
+.margin-top-70 {
+	margin-top: 70px !important;
+}
+
+.margin-top-80 {
+	margin-top: 80px !important;
+}
+
+.margin-top-90 {
+	margin-top: 90px !important;
+}
+
+.margin-top-100 {
+	margin-top: 100px !important;
+}
+
+.margin-top-120 {
+	margin-top: 120px !important;
+}
+
+.margin-top-150 {
+	margin-top: 150px !important;
+}
+
+.margin-top-200 {
+	margin-top: 200px !important;
+}
+
+
+/* Margin Bottom */
+
+.margin-bottom-0 {
+	margin-bottom: 0px !important;
+}
+
+.margin-bottom-10 {
+	margin-bottom: 10px !important;
+}
+
+.margin-bottom-20 {
+	margin-bottom: 20px !important;
+}
+
+.margin-bottom-30 {
+	margin-bottom: 30px !important;
+}
+
+.margin-bottom-40 {
+	margin-bottom: 40px !important;
+}
+
+.margin-bottom-50 {
+	margin-bottom: 50px !important;
+}
+
+.margin-bottom-60 {
+	margin-bottom: 60px !important;
+}
+
+.margin-bottom-70 {
+	margin-bottom: 70px !important;
+}
+
+.margin-bottom-80 {
+	margin-bottom: 80px !important;
+}
+
+.margin-bottom-90 {
+	margin-bottom: 90px !important;
+}
+
+.margin-bottom-100 {
+	margin-bottom: 100px !important;
+}
+
+.margin-bottom-120 {
+	margin-bottom: 120px !important;
+}
+
+.margin-bottom-150 {
+	margin-bottom: 150px !important;
+}
+
+.margin-bottom-200 {
+	margin-bottom: 200px !important;
+}
+
+
+
+/* Padding */
+
+.padding-0 {
+	padding: 0px !important;
+}
+
+
+/* Padding Top */
+
+.padding-top-0 {
+	padding-top: 0px !important;
+}
+
+.padding-top-10 {
+	padding-top: 10px !important;
+}
+
+.padding-top-20 {
+	padding-top: 20px !important;
+}
+
+.padding-top-30 {
+	padding-top: 30px !important;
+}
+
+.padding-top-40 {
+	padding-top: 40px !important;
+}
+
+.padding-top-50 {
+	padding-top: 50px !important;
+}
+
+.padding-top-60 {
+	padding-top: 60px !important;
+}
+
+.padding-top-70 {
+	padding-top: 70px !important;
+}
+
+.padding-top-80 {
+	padding-top: 80px !important;
+}
+
+.padding-top-90 {
+	padding-top: 90px !important;
+}
+
+.padding-top-100 {
+	padding-top: 100px !important;
+}
+
+.padding-top-120 {
+	padding-top: 120px !important;
+}
+
+.padding-top-150 {
+	padding-top: 150px !important;
+}
+
+.padding-top-200 {
+	padding-top: 200px !important;
+}
+
+
+/* Padding Bottom */
+
+.padding-bottom-0 {
+	padding-bottom: 0px !important;
+}
+
+.padding-bottom-10 {
+	padding-bottom: 10px !important;
+}
+
+.padding-bottom-20 {
+	padding-bottom: 20px !important;
+}
+
+.padding-bottom-30 {
+	padding-bottom: 30px !important;
+}
+
+.padding-bottom-40 {
+	padding-bottom: 40px !important;
+}
+
+.padding-bottom-50 {
+	padding-bottom: 50px !important;
+}
+
+.padding-bottom-60 {
+	padding-bottom: 60px !important;
+}
+
+.padding-bottom-70 {
+	padding-bottom: 70px !important;
+}
+
+.padding-bottom-80 {
+	padding-bottom: 80px !important;
+}
+
+.padding-bottom-90 {
+	padding-bottom: 90px !important;
+}
+
+.padding-bottom-100 {
+	padding-bottom: 100px !important;
+}
+
+.padding-bottom-120 {
+	padding-bottom: 120px !important;
+}
+
+.padding-bottom-150 {
+	padding-bottom: 150px !important;
+}
+
+.padding-bottom-200 {
+	padding-bottom: 200px !important;
+}
+
+
+#intro-coverflow {
+    display: none;
+}
+
+.flipster--active {
+    display: block !important;
+}
